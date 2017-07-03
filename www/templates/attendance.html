@@ -1,0 +1,61 @@
+
+
+<ion-view title="Time Entry" id="page12" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="timeEntry-form8" class="list ">
+          <ion-item class="item-avatar  " id="pMSDashboard-list-item3">
+            <img ng-src="{{employee.ImgURL}}">
+            <h2 ng-bind="employee.Name"></h2>
+            <p ng-bind="employee.Designation.Name"  ></p>
+            <p >{{employee.EPFNo}} &nbsp;<b>/</b>&nbsp; {{employee.MobileNo}}</p>
+          </ion-item>
+            
+
+            
+		
+		    <div class="item item-icon-left" ion-datetime-picker date ng-model="attendApp.Date">
+                <i class="icon ion-ios-calendar positive"></i>
+                Date :
+                <strong>{{attendApp.Date| date: "yyyy-MM-dd"}}</strong>
+            </div>
+			
+            <div class="item item-icon-left" ion-datetime-picker time am-pm ng-model="attendApp.CheckIn">
+                <i class="icon ion-ios-clock-outline positive"></i>
+                Check In:
+                <strong>{{attendApp.CheckIn| date: "h:mm a"}}</strong>
+            </div>
+			
+			
+			 <div class="item item-icon-left" ion-datetime-picker time am-pm ng-model="attendApp.CheckOut">
+                <i class="icon ion-ios-clock-outline positive"></i>
+                Check Out:
+                <strong>{{attendApp.CheckOut| date: "h:mm a"}}</strong>
+            </div>
+			
+            <button type="submit"  ng-click="attendanceClick(attendApp)" id="timeEntry-button16" class=" button button-positive  button-block ">Submit!</button>
+        </form>
+
+
+       <!--<div ng-controller="MapController">
+
+           <div id="map" data-tap-disabled="true"></div>
+
+
+         <ion-pane>
+            <ion-header-bar class="bar-stable">
+              <h1 class="title">PMS Map123</h1>
+            </ion-header-bar>
+            <ion-content ng-controller="MapController">
+              <div id="map" data-tap-disabled="true"></div>
+            </ion-content>
+          </ion-pane>
+
+
+          <script src="https://maps-api-ssl.google.com/maps/api/js?libraries=places"></script>
+        </div>-->
+
+
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view title="PMS Dashboard" id="page11" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="pMSDashboard-list5" class=" ">
+            <ion-item class="item-avatar  " id="pMSDashboard-list-item3">
+                <img ng-src="{{employee.ImgURL}}">
+                <h2 ng-bind="employee.Name"></h2>
+                <p ng-bind="employee.Designation.Name"  ></p>
+                <p >{{employee.EPFNo}} &nbsp;<b>/</b>&nbsp; {{employee.MobileNo}}</p>
+            </ion-item>
+            <!--<ion-item class="item-icon-left  " id="pMSDashboard-list-item5">
+              Emp No :<i class="icon ion-ionic"></i>{{employee.EPFNo}}</ion-item>
+            <ion-item class="item-icon-left  " id="pMSDashboard-list-item6">
+                <i class="icon ion-ionic"></i>Mobile : {{employee.MobileNo}}</ion-item>-->
+        </ion-list>
+        
+        <!--&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-->
+        <a ui-sref="timeEntry" id="pMSDashboard-button19" style="margin-top: 20px" class="button button-block button-outline icon-right ion-clock  button-positive">Add Time Entry</a>
+        
+        <a ui-sref="attendance" id="pMSDashboard-button20" style="margin-top: 20px;" class="button button-block button-outline icon-right ion-calendar  button-positive">&nbsp&nbsp&nbsp&nbspAttendance&nbsp&nbsp</a>
+        
+        <!--<a ui-sref="timeEntry" id="pMSDashboard-button19" class=" button button-icon icon ion-settings   ">Add Time Entry!</a>
+        <a ui-sref="attendance" id="pMSDashboard-button20" class="button button-icon icon ion-settings ">Attendance!</a>
+        -->
+    </ion-content>
+</ion-view>

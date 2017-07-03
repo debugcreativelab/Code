@@ -1,0 +1,55 @@
+<ion-view title="Time Entry" id="page12" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="timeEntry-form8" class="list ">
+          <ion-item class="item-avatar  " id="pMSDashboard-list-item3">
+            <img ng-src="{{employee.ImgURL}}">
+            <h2 ng-bind="employee.Name"></h2>
+            <p ng-bind="employee.Designation.Name"  ></p>
+            <p >{{employee.EPFNo}} &nbsp;<b>/</b>&nbsp; {{employee.MobileNo}}</p>
+          </ion-item>
+            <label class="item item-select " id="timeEntry-select1">
+
+              <select ng-model="UserCheckInApp.Category" ng-options="item.Id as item.Name for item in timeEntryCatList">
+                <option value="">Select </option>
+              </select>
+            </label>
+
+
+              <!--<select ng-model="selectedItem">
+                <option ng-repeat="item in timeEntryCatList" value="{{item.Id}}">{{item.Name}}</option>
+              </select>-->
+
+
+            <label class="item item-input " id="timeEntry-input17">
+                <input type="text" placeholder="Client" ng-model="UserCheckInApp.Client">
+            </label>
+            <label class="item item-input " id="timeEntry-input15">
+                <input type="text" placeholder="Reason" ng-model="UserCheckInApp.Reasone">
+            </label>
+            <button type="submit"  ng-click="userCheckIn(UserCheckInApp)" id="timeEntry-button16" class=" button button-positive  button-block ">Submit!</button>
+        </form>
+
+
+       <!--<div ng-controller="MapController">
+
+           <div id="map" data-tap-disabled="true"></div>
+
+
+         <ion-pane>
+            <ion-header-bar class="bar-stable">
+              <h1 class="title">PMS Map123</h1>
+            </ion-header-bar>
+            <ion-content ng-controller="MapController">
+              <div id="map" data-tap-disabled="true"></div>
+            </ion-content>
+          </ion-pane>
+
+
+          <script src="https://maps-api-ssl.google.com/maps/api/js?libraries=places"></script>
+        </div>-->
+
+
+
+
+    </ion-content>
+</ion-view>

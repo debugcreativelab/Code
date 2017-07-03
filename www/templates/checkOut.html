@@ -1,0 +1,30 @@
+<ion-view title="Check Out" id="page13" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="checkOut-form9" class="list ">
+
+          <ion-item class="item-avatar  " id="pMSDashboard-list-item3">
+            <img ng-src="{{employee.ImgURL}}">
+            <h2 ng-bind="employee.Name"></h2>
+            <p ng-bind="employee.Designation.Name"  ></p>
+            <p >{{employee.EPFNo}} &nbsp;<b>/</b>&nbsp; {{employee.MobileNo}}</p>
+          </ion-item>
+
+          <label class="item item-input " id="checkOut-input18">
+            Entry Category :<p ng-bind="timeEntryCheckIn.TimeEntry.TimeEntryCategory.Name"></p>
+          </label>
+          <label class="item item-input " id="checkOut-input16">
+            Client :<p ng-bind="timeEntryCheckIn.Client"></p>
+          </label>
+            <label class="item item-input " id="checkOut-input16">
+              Reason :<p ng-bind="timeEntryCheckIn.Reason"></p>
+            </label>
+
+            <ion-item class="item-icon-left  " id="checkOut-list-item12">
+                <i class="icon ion-log-in"></i>{{timeEntryCheckIn.TimeEntry.TimeOut | date:"MM/dd/yyyy 'at' h:mma"}}
+            </ion-item>
+
+          <button type="submit"  ng-click="userCheckOut()" id="timeEntry-button16" class=" button button-positive  button-block ">Check out</button>
+        </form>
+       
+    </ion-content>
+</ion-view>

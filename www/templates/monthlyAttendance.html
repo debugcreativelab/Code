@@ -1,0 +1,38 @@
+<ion-view title="Monthly Attendance" id="monthlyAttendance" class=" ">
+    <ion-content padding="true" class="has-header">
+     <form style="padding-left: 20px; padding-right: 5px;" id="monthlyAttendance-form" class="list ">
+       <table class="table table-striped" padding="true">
+        <thead>
+         <tr>
+          <th class="col col-20">Date</th>
+          <th class="col col-25">Type</th>
+          <th class="col col-20">In</th>
+          <th class="col col-20">Out</th>
+          <th class="col col-20">Status</th>
+          <th style="display: none;" class="col col-20">Id</th>
+       
+         </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in timeEntryCatList" ng-click="getDetails(data.AttendanceId)">
+          
+          <td class="col col-20">{{data.AttendanceDate | date}}</td>
+          <td class="col col-25">{{data.DayType | makeSmaller}}</td>
+          <td class="col col-20">{{data.InTime | date: "HH:mm"}}</td>
+          <td class="col col-20">{{data.OutTime | date: "HH:mm"}}</td>
+          <td class="col col-20">{{data.Status}}</td>
+          <td style="display: none;" class="col col-20">{{data.AttendanceId}}</td>
+
+ 
+        </tr>
+       </tbody>
+     </table>
+          <div>
+            <button id="monthlyAttendance-button1" class="button button-block button-outline button-positive" ng-click="moveToDashboard()" id="" >Dashboard</button>
+            <button id="monthlyAttendance-button2" class="button button-block button-outline button-assertive" ng-click="moveToHome()" id="" >Home</button>
+
+          </div>
+        </form>
+
+    </ion-content>
+</ion-view>

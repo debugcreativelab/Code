@@ -1,0 +1,41 @@
+<ion-view title="Attendance Request Summary" id="page14" class=" ">
+    <ion-content padding="true" class="has-header">
+
+
+          <ion-item class="item-avatar  " id="pMSDashboard-list-item3">
+            <img ng-src="{{employee.ImgURL}}">
+            <h2 ng-bind="employee.Name"></h2>
+            <p ng-bind="employee.Designation.Name"  ></p>
+            <p >{{employee.EPFNo}} &nbsp;<b>/</b>&nbsp; {{employee.MobileNo}}</p>
+          </ion-item>
+
+		  
+		  <ion-item class="button button-positive item-icon-left  " id="checkOut-list-item12">
+        <!--<div class="button button-positive item-icon-left  " id="checkOut-list-item12">
+        <button class="button button-block button-positive">
+          <i class="icon ion-log-in"></i>Date ee  : {{mobileAttendance.AttendDate | date:"MM-dd-yyyy"}}
+        </button>
+        <button class="button button-block button-positive">
+            <i class="icon ion-log-in"></i>Check InTime {{mobileAttendance.InTime | date:" 'at' h:mma"}}
+        </button>
+        <button class="button button-block button-positive">
+         <i class="icon ion-log-in"></i>Check OutTime {{mobileAttendance.OutTime | date:" 'at' h:mma"}}
+        </button>
+        <button class="button button-block button-positive">
+          Block Button
+        </button>
+        </div>-->
+            <i class="icon ion-log-in"></i>Date   : {{mobileAttendance.AttendDate | date:"MM-dd-yyyy"}}
+          </ion-item>
+          <ion-item class="item-icon-left  " id="checkOut-list-item12">
+            <i class="icon ion-log-in"></i>Check InTime {{mobileAttendance.InTime | date:" 'at' h:mma"}}
+          </ion-item>
+          <ion-item class="item-icon-left  " id="checkOut-list-item12">
+            <i class="icon ion-log-in"></i>Check OutTime {{mobileAttendance.OutTime | date:" 'at' h:mma"}}
+          </ion-item>
+
+          <div>
+            <button type="button"  ng-click="reDirectDashboard()"  class=" button button-positive  button-block ">Dashboard</button>
+          </div>
+    </ion-content>
+</ion-view>
